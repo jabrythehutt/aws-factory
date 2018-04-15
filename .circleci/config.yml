@@ -22,11 +22,13 @@ jobs:
       - run: npm run lint
       - run: npm run test
       - run: npm run build
+      - persist_to_workspace
 
   publish:
       docker:
         - image: circleci/node:9-browsers
       steps:
+        - attach_workspace
         - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
         - run: npm run deploy
 
@@ -36,11 +38,11 @@ workflows:
     jobs:
       - build:
           filters:
-            tags:
+            branches:
               only: /.*/
       - publish:
           requires:
             - build
           filters:
-            tags:
-              only: /v[0-9]+(\.[0-9]+)*/
+            branches:
+              only: master
