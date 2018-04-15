@@ -62,7 +62,6 @@ typings/
 # next.js build output
 .next
 .idea
-.git/
 .gitignore
 **/*.ts
 !**/*.d.ts
