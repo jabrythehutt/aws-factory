@@ -22,13 +22,15 @@ jobs:
       - run: npm run lint
       - run: npm run test
       - run: npm run build
-      - persist_to_workspace
+      - persist_to_workspace:
+          root: workspace
 
   publish:
       docker:
         - image: circleci/node:9-browsers
       steps:
-        - attach_workspace
+        - attach_workspace:
+            at: .
         - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
         - run: npm run deploy
 
