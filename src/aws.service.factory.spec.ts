@@ -53,7 +53,7 @@ const credentialScenarios: FactoryGenerator[] = [
 
 ];
 
-describe("AWS service factory", () => {
+describe("AWS factory", () => {
 
     before("Initialise chai", () => {
         should();
