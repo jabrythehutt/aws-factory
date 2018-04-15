@@ -36,7 +36,7 @@ jobs:
         - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
         - run: git config --global user.email "djabry@gmail.com"
         - run: git config --global user.name "CI"
-        - run: ssh-keyscan github.com >> ~/.ssh/known_hosts
+        - run: echo "HOST github.com" >> ~/.ssh/config
         - run: npm run deploy
 
 workflows:
