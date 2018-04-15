@@ -7,7 +7,7 @@
     "lint": "tslint src/**/*.ts",
     "test": "mocha src/*.spec.ts",
     "build": "tsc",
-    "deploy": "npm version patch && npm run build && npm publish"
+    "deploy": "npm run lint && npm run test && npm version patch && git push --follow-tags"
   },
   "author": "Daniel Jabry <djabry@gmail.com>",
   "license": "MIT",
