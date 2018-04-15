@@ -23,7 +23,7 @@ jobs:
       - run: npm run test
       - run: npm run build
       - persist_to_workspace:
-          root: workspace
+          root: .
 
   publish:
       docker:
