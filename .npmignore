@@ -66,3 +66,4 @@ typings/
 **/*.ts
 !**/*.d.ts
 test
+.circleci
