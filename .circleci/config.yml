@@ -31,12 +31,12 @@ jobs:
       docker:
         - image: circleci/node:9-browsers
       steps:
+        - checkout
         - attach_workspace:
             at: .
         - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
         - run: git config --global user.email "djabry@gmail.com"
         - run: git config --global user.name "CI"
-        - run: echo "HOST github.com" >> ~/.ssh/config
         - run: npm run deploy
 
 workflows:
