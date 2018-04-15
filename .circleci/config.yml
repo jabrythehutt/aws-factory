@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:9-browsers
+      - image: circleci/node:9.11.1
     steps:
       - checkout
       # Download and cache dependencies
@@ -29,7 +29,7 @@ jobs:
 
   publish:
       docker:
-        - image: circleci/node:9-browsers
+        - image: circleci/node:9.11.1
       steps:
         - checkout
         - attach_workspace:
