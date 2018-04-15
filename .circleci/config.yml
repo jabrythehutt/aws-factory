@@ -28,7 +28,7 @@ jobs:
         - image: circleci/node:9-browsers
       steps:
         - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-        - run: npm publish
+        - run: npm run deploy
 
 workflows:
   version: 2
