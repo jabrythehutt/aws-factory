@@ -22,3 +22,24 @@ jobs:
       - run: npm run lint
       - run: npm run test
       - run: npm run build
+
+  publish:
+      docker:
+        - image: circleci/node:9-browsers
+      steps:
+        - checkout
+        - run: npm install
+        - run: npm run build
+        - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+        - run: npm publish
+
+workflows:
+  build-publish:
+    jobs:
+      - build
+      - publish
+        requires:
+          - build
+        filters:
+          tags:
+            only: /v[0-9]+(\.[0-9]+)*/
