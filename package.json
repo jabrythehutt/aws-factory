@@ -1,6 +1,6 @@
 {
   "name": "@djabry/aws-factory",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "Instantiates Node/Browser AWS classes after authenticating",
   "main": "index.js",
   "scripts": {
