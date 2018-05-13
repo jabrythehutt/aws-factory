@@ -47,6 +47,12 @@ export class AwsServiceFactory<C extends Credentials> {
         return serviceType[awsServiceIdentifierKey];
     }
 
+    /**
+     * Find or create an AWS instance
+     * @param {ClassType<S extends Service>} type - The class to instantiate
+     * @param {O} [config] - The optional service configuration
+     * @return {Promise<S extends Service>} - A promise of the service that gets resolved once authenticated
+     */
     async getService<O extends ServiceConfigurationOptions, S extends Service>(type: ClassType<S>,
                                                                                config?: O): Promise<S> {
         const serviceName = this.getServiceIdentifier(type);
