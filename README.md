@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/djabry/aws-factory.svg?style=svg)](https://circleci.com/gh/djabry/aws-factory)
+[![CircleCI](https://circleci.com/gh/djabry/aws-factory.svg?style=svg&circle-token=c8b8f01bb58ebe95adb9cfdba94671a2b6469d66)](https://circleci.com/gh/djabry/aws-factory)
 # AWS factory
 A library for simplifying your authentication and class instantiation logic when working with the [AWS Javascript SDK](https://aws.amazon.com/sdk-for-node-js/).
 
