@@ -12,7 +12,7 @@
   "author": "Daniel Jabry <djabry@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "aws-sdk": "2.238.1"
+    "aws-sdk": "2.361.0"
   },
   "devDependencies": {
     "@types/chai": "4.1.2",
