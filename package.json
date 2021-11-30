@@ -1,13 +1,13 @@
 {
   "name": "@jabrythehutt/aws-factory",
-  "version": "0.0.23",
+  "version": "0.0.0-PLACEHOLDER",
   "description": "Instantiates Node/Browser AWS classes after authenticating",
   "main": "index.js",
   "scripts": {
     "lint": "tslint src/**/*.ts",
     "test": "mocha src/*.spec.ts",
     "build": "tsc",
-    "deploy": "npm publish --access public"
+    "deploy": "npm config set git-tag-version=false && npm version $(git describe --tags) && npm publish --access public --dry-run"
   },
   "author": "Daniel Jabry <djabry@gmail.com>",
   "license": "MIT",
