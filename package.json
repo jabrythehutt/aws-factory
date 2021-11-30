@@ -1,5 +1,5 @@
 {
-  "name": "@djabry/aws-factory",
+  "name": "@jabrythehutt/aws-factory",
   "version": "0.0.23",
   "description": "Instantiates Node/Browser AWS classes after authenticating",
   "main": "index.js",
