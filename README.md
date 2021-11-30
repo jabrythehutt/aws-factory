@@ -12,7 +12,7 @@ Many of the projects I've worked on involved a step requiring a user to authenti
 
 2. Initialise your factory:
     ```typescript
-    import {AwsServiceFactory} from "@djabry/aws-factory";
+    import {AwsServiceFactory} from "@jabrythehutt/aws-factory";
     const awsFactory = new AwsServiceFactory();
     ```
 
