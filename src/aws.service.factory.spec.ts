@@ -15,7 +15,7 @@ import APIGateway from "aws-sdk/clients/apigateway";
 import {awsServiceIdentifierKey} from "./aws.service.identifier.key";
 
 let awsServiceFactory: AwsServiceFactory<Credentials>;
-const serviceClasses = [S3, DynamoDB, EC2, APIGateway, Kinesis, SES, Lambda, SNS, STS] as Array<ClassType<Service>>;
+const serviceClasses = [S3, DynamoDB, EC2, APIGateway, Kinesis, SES, Lambda, SNS, STS] as ClassType<Service>[];
 
 async function sleep(period: number) {
     return new Promise(resolve => {
