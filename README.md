@@ -7,12 +7,12 @@ Many of the projects I've worked on involved a step requiring a user to authenti
 ## How?
 1. Install the library:
    ```bash
-   npm i @djabry/aws-factory
+   npm i @jabrythehutt/aws-factory
     ``` 
 
 2. Initialise your factory:
     ```typescript
-    import {AwsServiceFactory} from "@djabry/aws-factory";
+    import {AwsServiceFactory} from "@jabrythehutt/aws-factory";
     const awsFactory = new AwsServiceFactory();
     ```
 
